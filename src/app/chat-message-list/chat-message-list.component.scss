@@ -1,0 +1,10 @@
+@import './../styles/layout.scss';
+:host {
+    overflow-y: auto;
+    @extend %container;
+    @extend %box-border;
+    flex-grow: 1;
+    jc-chat-message+jc-chat-message {
+        margin-top: 1em;
+    }
+}

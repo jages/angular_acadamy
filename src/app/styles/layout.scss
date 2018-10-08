@@ -1,0 +1,26 @@
+@import './colors.scss';
+$top-container-width: 80%;
+$top-container-maxwidth: 640px;
+$top-container-margin: 10px;
+%container {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+%box-container {
+    display: block;
+    width: $top-container-width;
+    max-width: $top-container-maxwidth;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+%box-border {
+    border: 2px solid $bluegray;
+    border-radius: 4px;
+    padding: 4px;
+    margin-top: $top-container-margin;
+}

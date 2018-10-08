@@ -1,0 +1,12 @@
+@import './../styles/layout.scss';
+:host {
+    @extend %box-container;
+    @extend %box-border;
+    perspective: 100px;
+    h1 {
+        text-align: center;
+        transform: rotateX(45deg);
+        color: gold;
+        text-shadow: 0 0 10px black;
+    }
+}

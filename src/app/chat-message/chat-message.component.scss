@@ -1,0 +1,40 @@
+@import './../styles/colors.scss';
+:host {
+    display: block;
+    &.right {
+        margin-left: 40px;
+    }
+    &.left {
+        margin-right: 40px;
+        .chat-message-user {
+            text-align: left;
+            padding-left: 8px;
+        }
+    }
+    &.center {
+        margin-left: 60px;
+        margin-right: 60px;
+        .chat-message-user {
+            text-align: center;
+            padding-left: 8px;
+        }
+    }
+    &.alert-info {
+        .chat-message-content {
+            background-color: $cyan;
+            text-align: center;
+            color: $lightgray;
+        }
+    }
+    .chat-message-content {
+        background-color: $lightgray;
+        color: $darkgray;
+        padding: 8px;
+        border-radius: 8px;
+    }
+    .chat-message-user {
+        font-size: 0.8em;
+        text-align: right;
+        padding-right: 8px;
+    }
+}
