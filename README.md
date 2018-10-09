@@ -37,6 +37,7 @@ npm install -g @angular/cli
 //ein neues Projekt legt ihr jetzt zum Beispiel so an:
 ng new projektname
 ```
+Hierbei wird ein komplett frisches Projekt angelegt, alle Vorarbeiten die wir bereits für euch vorgenommen haben um den Einstieg zu erleichtern sind hier nicht vorhanden.
 
 Da `npm run start` die lokal installierte CLI verwendet und eigentlich `ng serve` ausführt, könnt ihr stattdessen auch `ng serve` oder `ng serve --open` verwenden. 
 
