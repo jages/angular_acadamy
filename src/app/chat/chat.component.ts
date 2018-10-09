@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from './chat/user';
-import {ChatMessage} from './chat/chat-message/chat-message';
+import {ChatMessage} from './chat-message/chat-message';
+import {User} from './user';
 
 const BOT: User = {
   id: -1,
@@ -18,38 +18,26 @@ const GENERAL_GRIEVOUS: User = {
 };
 
 @Component({
-  selector: 'jc-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'jc-chat',
+  templateUrl: './chat.component.html',
+  styleUrls: ['./chat.component.scss']
 })
-export class AppComponent implements OnInit {
+export class ChatComponent implements OnInit {
   private _currentId = 0;
   public messages: ChatMessage[];
-  public currentMessageText: string;
+
 
   ngOnInit(): void {
     this.initMocks();
+    console.log(this.messages);
   }
 
-  public sendMessage(): void {
-    if (this.currentMessageText) {
-      this.messages.push(this.messageFrom(this.currentMessageText));
-      this.currentMessageText = '';
-    }
+  public sendAsUser(message: string) {
+    this.messages.push(this.messageFrom(message));
   }
 
-  public sendReplyAsGrievous(): void {
-    if (this.currentMessageText) {
-      this.messages.push(this.messageFrom(this.currentMessageText, GENERAL_GRIEVOUS, 'left'));
-      this.currentMessageText = '';
-    }
-  }
-
-  public rightClickDemoAsGrievous(event: MouseEvent): void {
-    // otherwise the context menu will show up
-    event.stopPropagation();
-    event.preventDefault();
-    this.sendReplyAsGrievous();
+  public sendAsGrievous(message: string) {
+    this.messages.push(this.messageFrom(message, GENERAL_GRIEVOUS, 'left'));
   }
 
   private getIncreasedId(): number {
