@@ -27,9 +27,8 @@ export class ChatComponent implements OnInit {
   public messages: ChatMessage[];
 
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.initMocks();
-    console.log(this.messages);
   }
 
   public sendAsUser(message: string) {

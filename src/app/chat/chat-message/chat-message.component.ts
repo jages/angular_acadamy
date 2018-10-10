@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, HostBinding, Input, OnInit} from '@angular/core';
 import {ChatMessage} from './chat-message';
 
 @Component({
@@ -9,11 +9,13 @@ import {ChatMessage} from './chat-message';
 export class ChatMessageComponent implements OnInit {
 
   @Input() message: ChatMessage;
+  @Input() class: string;
+  @HostBinding('class') styles: string;
 
   constructor() {
   }
 
-  ngOnInit() {
+  public ngOnInit() {
+    this.styles = `${this.class} ${this.message.position} alert-${this.message.alert}`;
   }
-
 }
