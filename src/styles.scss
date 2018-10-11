@@ -31,6 +31,7 @@ body {
 body {
   header,
   main,
+  form,
   footer {
     width: 80%;
     max-width: 640px;
@@ -39,7 +40,8 @@ body {
     box-sizing: border-box;
   }
   header,
-  footer {
+  footer,
+  form input {
     border: 2px solid $bluegray;
     border-radius: 4px;
     padding: 4px;
@@ -57,7 +59,7 @@ body {
   footer {
     margin-bottom: 10px;
   }
-  main {
+  main, form {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -157,4 +159,102 @@ body {
       }
     }
   }
+}
+
+form {
+  label {
+    margin-top: 20px;
+    color: $darkgray;
+    &:first-child {
+      margin-top: 10px;
+    }
+  }
+  input,
+  select {
+    height: 20px;
+    outline: none;
+    margin-top: 5px;
+  }
+
+  .form_btns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    input[type=submit],
+    input[type=reset] {
+      background-color: $bluegray;
+      height: 30px;
+      width: 80px;
+      color: $lightgray;
+      cursor: pointer;
+      transition: border-color 0.1s;
+
+      &:active {
+        border-color: $blue;
+      }
+      &:disabled {
+        background-color: $lightgray;
+        color: $bluegray;
+      }
+    }
+  }
+
+  input[type=text] {
+    transition: border-color 1s;
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+  input[type=radio],
+  input[type=checkbox] {
+    width: 16px;
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+
+    +label {
+      cursor: pointer;
+    }
+  }
+
+  .credit_card_wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    label {
+      margin-top: 0;
+    }
+
+    .no_cb {
+      margin-top: -7px;
+      input[type=checkbox] {
+        top: 4px;
+        right: -6px;
+      }
+    }
+
+    input {
+      margin-top: 0;
+    }
+  }
+
+  .side_by_side {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    div {
+      width: auto;
+    }
+  }
+
+  input[type=text].ng-touched.ng-invalid,
+  input[type=text].dirty.ng-invalid{
+    border-color: $red;
+  }
+}
+
+#pet {
+  margin-top: 0;
 }

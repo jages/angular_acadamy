@@ -1,60 +1,119 @@
-<div class="chat">
+<div class="signup">
   <header>
-    <h1>Most Epic Jedi Chat</h1>
+    <h1>Signup</h1>
   </header>
-  <main>
-    <div class="chat-message-list">
-      <div class="chat-message center alert-info">
-        <div class="chat-message-content">
-          Welcome to Jedi Chat!
-        </div>
-        <div class="chat-message-user">
-          Channel Bot
-        </div>
-      </div>
+  <form>
 
-      <div class="chat-message left">
-        <div class="chat-message-content">
-          Hello World!
-        </div>
-        <div class="chat-message-user">
-          User 1
-        </div>
-      </div>
+    <label for="name">
+      Username
+    </label>
+    <input type="text" id="name">
 
-      <div class="chat-message">
-        <div class="chat-message-content">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-          sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr&hellip;
-        </div>
-        <div class="chat-message-user">
-          User 2
-        </div>
-      </div>
+    <label for="home_planet">
+      Heimatplanet
+    </label>
+    <input type="text" id="home_planet">
 
-      <div class="chat-message right">
-        <div class="chat-message-content">
-          Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. Ein kleines Bächlein namens Duden&hellip;
-        </div>
-        <div class="chat-message-user">
-          User 3
-        </div>
+    <label>
+      Geschlecht
+    </label>
+    <fieldset>
+      <div class="radio">
+        <input type="radio" id="undecided" name="gender" value="Unentschlossen">
+        <label for="undecided">Unentschlossen</label>
       </div>
+      <div class="radio">
+        <input type="radio" id="man" name="gender" value="Mann">
+        <label for="man">Mann</label>
+      </div>
+      <div class="radio">
+        <input type="radio" id="woman" name="gender" value="Frau">
+        <label for="woman">Frau</label>
+      </div>
+    </fieldset>
 
-      <div class="chat-message left">
-        <div class="chat-message-content">
-          Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht hatte...
-        </div>
-        <div class="chat-message-user">
-          User 4
-        </div>
+    <label for="age">
+      Alter
+    </label>
+    <input type="text" id="age">
+
+    <label for="mail">
+      E-Mail Adresse
+    </label>
+    <input type="text" id="mail">
+
+    <div class="credit_card_wrapper">
+      <label for="credit_card">
+        Kreditkartennummer
+      </label>
+
+      <div class="no_cb">
+        <input type="checkbox" id="no_credit_card">
+        <label for="no_credit_card">
+          Ich habe keine Kreditkarte
+        </label>
       </div>
     </div>
-    <div class="chat-message-input">
-      <input type="text">
-      <button>Send</button>
+    <input type="text" id="credit_card">
+
+    <div class="side_by_side">
+      <div>
+        <label for="brutto">
+          Bruttoeinkommen
+        </label>
+        <input type="text" id="brutto">
+      </div>
+
+      <div>
+        <label for="netto">
+          Nettoeinkommen
+        </label>
+        <input type="text" id="netto">
+      </div>
+
+      <div>
+        <label for="tax">
+          Abgaben in %
+        </label>
+        <input type="text" id="tax">
+      </div>
     </div>
-  </main>
+
+    <label for="pet">
+      <input type="checkbox" id="pet">
+      Ich möchte mein Haustier mitversichern
+    </label>
+
+    <label for="pet_name">
+      Name des Haustieres
+    </label>
+    <input type="text" id="pet_name">
+
+    <label>
+      Art des Haustieres
+    </label>
+    <fieldset>
+      <div class="radio">
+        <input type="radio" id="cat" name="pet_type" value="Cat">
+        <label for="cat">Katze</label>
+      </div>
+      <div class="radio">
+        <input type="radio" id="dog" name="pet_type" value="Mann">
+        <label for="dog">Hund</label>
+      </div>
+      <div class="radio">
+        <input type="radio" id="other" name="pet_type" value="Frau">
+        <label for="other">Anderes</label>
+      </div>
+    </fieldset>
+
+    <div class="form_btns">
+      <input type="reset" value="Reset">
+
+      <input type="submit" value="Submit">
+    </div>
+
+  </form>
   <footer>
     &copy; by me
   </footer>
