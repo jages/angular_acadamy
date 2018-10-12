@@ -1,0 +1,12 @@
+<div class="chat">
+  <header>
+    <h1>Most Epic Jedi Chat</h1>
+  </header>
+  <main>
+    <jc-chat-list [messages]="messages"></jc-chat-list>
+    <jc-chat-user-input (ChatMessage)="onMessageRecieved($event)"></jc-chat-user-input>
+  </main>
+  <footer>
+    &copy; by me
+  </footer>
+</div>
